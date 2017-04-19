@@ -1,0 +1,6 @@
+train_file=train.dat
+numSamples=40000
+chunkSize=5000
+alpha=0.25
+iterations=5
+test_file=test.dat
