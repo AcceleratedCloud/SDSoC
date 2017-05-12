@@ -32,17 +32,8 @@ void getDataFromFile(FILE*,char*,sparseEntry*);
 void calculateRMSE(int nData ,info* Ru , int numUsers ,float** M, float** U);
 int  exportRes(int nData,info* Ru,int numUsers,float** M,float** U);
 //---HARDWARE-----
-//specifies the system port
-#pragma SDS data sys_port(Sbuffer:ACP,Rbuffer:ACP)
-
-//specify data Mover
-#pragma SDS data mem_attribute (Sbuffer:PHYSICAL_CONTIGUOUS|CACHEABLE,Rbuffer:PHYSICAL_CONTIGUOUS|CACHEABLE,Aout:PHYSICAL_CONTIGUOUS|CACHEABLE,Vout:PHYSICAL_CONTIGUOUS|CACHEABLE)
-#pragma SDS data copy(Sbuffer[0:nratings*NFEATS],Rbuffer[0:nratings])
-#pragma SDS data data_mover(Sbuffer:AXIDMA_SIMPLE , Rbuffer:AXIDMA_SIMPLE, Aout:AXIDMA_SIMPLE , Vout:AXIDMA_SIMPLE)
 
 //accelerator interface
-#pragma SDS data access_pattern(Sbuffer:SEQUENTIAL,Rbuffer:SEQUENTIAL,Aout:SEQUENTIAL,Vout:SEQUENTIAL)
-
 void topLevelHW(float Sbuffer[NMAXRAT*NFEATS],float Rbuffer[NMAXRAT],int nratings,float Aout[NFEATS*NFEATS],float Vout[NFEATS]);
 void mul_hw1(float _buffer1[BUFFER_SIZE][NFEATS],float _buffer2[NFEATS][BUFFER_SIZE],float _A[NFEATS][NFEATS]);
 void mul_hw2(float _buffer1[BUFFER_SIZE][NFEATS],float _rbuff[BUFFER_SIZE],float _V[NFEATS]); 
