@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://caffe.berkeleyvision.org/">
-    <img src="https://dashbouquet.com/assets/img/blog/caffe-banner.png" alt="" width=400 height=195>
+    <img src="https://dashbouquet.com/assets/img/blog/caffe-banner.png" alt="" width=370 height=195>
   </a>
 
   <h2 align="center">Hardware acceleration of Deep Neural Networks</h2>
@@ -32,5 +32,48 @@ This work includes:
 
 
 ## Quick start
- 
- to be filled...
+
+#### Hardware Accelerator Evaluation
+
+- [Fixed GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe) `(fixed datatype implementation)`
+- [Float GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe) `(float datatype implementation)`
+
+#### Classification example (not full performance)
+
+- [Caffe C++ example](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe)
+
+#### Inference benchmark
+
+- [Caffe test](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe)
+
+
+## Results
+
+#### Accelerator Performance
+
+| GEMM `(2048x2048 input matrices)` |    Time (secs) |
+| :----------------- |:-----------------------:|
+| SW-only       `ARM Cortex-A9 @ 667MHz`     |   588s |
+| SW-only       `Intel i3 @ 3.5GHz`    |   141s |
+| OpenBLAS `ARM Cortex-A9 @ 667MHz`         | 8,3s |
+| HW accelerated (float datatype)  `Zedboard`    |    5s  |
+| HW accelerated (fixed datatype)  `Zedboard`    |    1,5s  |
+
+#### Caffe Performance
+
+| Image classification (HW accelerated)  |    Time (secs) |
+| ----------------- |:-----------------------:|
+|  CaffeNet    |   1,2s |
+| GoogleNet       | 2,8s |
+| SqueezeNet    |    0,67s  |
+
+#### Resource utilization for FPGA hardware
+
+Resource	|	Used	|	Total	|	% Utilization
+:----------:|----------:|----------:|:----------:|
+DSP	|	164	|	220	|	  75,55|
+BRAM	|	128	|	140	|	  91,43|
+LUT	|	45557	|	53200	|  	85,63|
+FF	|	24445	|	106400	|  	22,97|
+
+
