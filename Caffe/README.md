@@ -35,7 +35,7 @@ This work includes:
 
 #### Hardware Accelerator Evaluation
 
-- [Fixed GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe) `(fixed datatype implementation)`
+- [Fixed GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe/gemm_test/sd_card-fixed) `(fixed datatype implementation)`
 - [Float GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe) `(float datatype implementation)`
 
 #### Classification example (not full performance)
