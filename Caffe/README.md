@@ -26,25 +26,21 @@ Caffe is an intuitive and powerful framework that implements Deep Neural Network
 This project demonstrates the deployment of DNNs with Caffe in the embedded system of Zynq 7000 SoC and the acceleration through the FPGA. The code provided is designed and optimized with Xilinx SDSoC and runs on the Zedboard but can be easily modified for other Zynq based SoCs.
 This work includes:
 - The evaluation of the FPGA hardware accelerator used in the project: `GEMM (General Matrix Multiply)`
-- The compiled Caffe framework and all its libraries in order to run in the embbeded SoC: `ARM CPU`
-- The final CPU-FPGA system that supports Caffe and utilizes the hardware accelerator: `SD boot card provided`
-- The SW and HW system evaluation of DNNs using Caffe : `models supported -> SqueezeNet, GoogleNet, etc.`
-
+- The compiled Caffe framework and all its libraries in order to run on the embbeded CPU
+- The final CPU-FPGA system that supports Caffe and utilizes the hardware accelerator
+- The evaluation of Caffe on the final system
 
 ## Quick start
 
 #### Hardware Accelerator Evaluation
 
+- [Float GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe/gemm_test/sd_card-float) `(float datatype implementation)`
 - [Fixed GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe/gemm_test/sd_card-fixed) `(fixed datatype implementation)`
-- [Float GEMM](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe) `(float datatype implementation)`
 
-#### Classification example (not full performance)
+#### Caffe evaluation
 
-- [Caffe C++ example](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe)
+- [Caffe](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe/caffe-sd_card) `pretrained models provided`
 
-#### Inference benchmark
-
-- [Caffe test](https://github.com/AcceleratedCloud/SDSoC/tree/master/Caffe)
 
 
 ## Results
@@ -56,7 +52,7 @@ This work includes:
 | SW-only       `ARM Cortex-A9 @ 667MHz`     |   588s |
 | SW-only       `Intel i3 @ 3.5GHz`    |   141s |
 | OpenBLAS `ARM Cortex-A9 @ 667MHz`         | 8,3s |
-| HW accelerated (float datatype)  `Zedboard`    |    5s  |
+| HW accelerated (float datatype)  `Zedboard`    |    5,3s  |
 | HW accelerated (fixed datatype)  `Zedboard`    |    1,5s  |
 
 #### Caffe Performance
@@ -76,4 +72,9 @@ BRAM	|	128	|	140	|	  91,43|
 LUT	|	45557	|	53200	|  	85,63|
 FF	|	24445	|	106400	|  	22,97|
 
+#### Contact
+For any information, please contact the authors:
+
+* Christoforos Kachris: kachris@microlab.ntua.gr
+* Dimitrios Danopoulos : dim.danopoulos@gmail.com
 

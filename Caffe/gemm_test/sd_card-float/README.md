@@ -7,5 +7,5 @@ Steps:
 4. Run:
 ```
 $ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/lib/
-$ ./mnt/zed_gemm_float.elf
+$ ./mnt/zed_gemm_96float.elf
 ```
