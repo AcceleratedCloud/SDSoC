@@ -40,7 +40,7 @@ FF	|	29271	|	106400	|	27.51
 #### Performance (`NBprediction_accel`, `2000 Examples`)
 Speedup (vs ARM-A9)	|	14
 :----------|----------:
-SW-only `ARM Cortex-A9 @ 666.67MHz` (Measured time)	|	783 sec
+SW-only `ARM Cortex-A9 @ 666.67MHz` (Measured time)	|	7.83 sec
 HW accelerated (Measured time)		|	0.5 sec
 
 
