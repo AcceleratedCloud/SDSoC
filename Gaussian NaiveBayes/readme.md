@@ -9,7 +9,7 @@ The Naive Bayes IP is used forNaive Bayes applications. It is produced with SDSo
 The code provided in this folder is a C-based implementation for NaiveBayes Training an d Prediction, optimised for ZED board, and is a case study of FPGA-Accelerated Machine Learning.
 
 
-### Testing Logistic Regression example in Hardware
+### Testing Gaussian Naive Bayes example in Hardware
 The C source files are provided here without project files, but they contain HLS/SDS directives specific to Xilinx SDSoC. 
 
 `!The code of the hardware function is not fully annotated and contains only interface directives.!`
