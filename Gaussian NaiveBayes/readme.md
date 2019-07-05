@@ -18,7 +18,7 @@ If you use any of the tools in your work, we would love to hear about it and wou
 @misc{
   author =       "Georgios Tzanos, Christoforos Kachris, and Dimitrios Soudris",
   title =        "Hardware Acceleration on Gaussian Naive Bayes Machine Learning Alogorithm",
-  conference=    "(MOCAST)",
+  conference =   "(MOCAST)",
   year =         "2019",
   month =        "May",
 }
