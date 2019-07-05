@@ -10,7 +10,7 @@ The code provided in this folder is a C-based implementation for NaiveBayes Trai
 
 # Publication
 
-If you use any of the tools in your work, we would love to hear about it and would very much appreciate a citation:
+If you use any part of this work, we would love to hear about it and would very much appreciate a citation:
 
 - Hardware Acceleration on Gaussian Naive Bayes Machine Learning Alogorithm , Georgios Tzanos, Christoforos Kachris, and Dimitrios Soudris. International Conference on Modern Circuits and Systems Technologies (MOCAST), 2019.
 
