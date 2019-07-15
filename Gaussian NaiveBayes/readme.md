@@ -18,7 +18,7 @@ If you use any part of this work, we would love to hear about it and would very 
 @misc{
   author =       "Georgios Tzanos, Christoforos Kachris, and Dimitrios Soudris",
   title =        "Hardware Acceleration on Gaussian Naive Bayes Machine Learning Alogorithm",
-  conference =   "(MOCAST)",
+  conference =   "International Conference on Modern Circuits and Systems Technologies(MOCAST)",
   year =         "2019",
   month =        "May",
 }
